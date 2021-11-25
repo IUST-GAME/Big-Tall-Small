@@ -1,6 +1,6 @@
 # Big Tall Small
 
-![Untitled](docs/Untitled.png)
+![Untitled](Docs/Untitled.png)
 
 ## MVP Feature list
 
