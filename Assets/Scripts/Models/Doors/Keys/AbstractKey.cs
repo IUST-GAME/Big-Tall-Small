@@ -2,8 +2,8 @@
 
 namespace Models.Doors.Keys
 {
-    public class AbstractKey : MonoBehaviour
+    public abstract class AbstractKey : MonoBehaviour
     {
-        
+        public abstract void PlayPickingSound();
     }
 }

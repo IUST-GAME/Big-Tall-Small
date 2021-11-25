@@ -2,8 +2,9 @@
 
 namespace UI.Buttons
 {
-    public class AbstractButton : MonoBehaviour
+    public abstract class AbstractButton : MonoBehaviour
     {
-        
+        public abstract void PlayButtonSound();
+        public abstract void OnButtonPressed();
     }
 }

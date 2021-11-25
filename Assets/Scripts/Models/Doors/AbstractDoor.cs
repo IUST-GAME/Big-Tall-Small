@@ -2,7 +2,9 @@
 
 namespace Models.Doors
 {
-    public class AbstractDoor : MonoBehaviour
+    public abstract class AbstractDoor : MonoBehaviour
     {
+        public abstract void PlayOpeningDoorSound();
+        public abstract bool CanItBeOpened();
     }
 }

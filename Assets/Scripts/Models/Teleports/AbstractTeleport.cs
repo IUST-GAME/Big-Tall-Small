@@ -1,8 +1,15 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 namespace Models.Teleports
 {
-    public class AbstractTeleport : MonoBehaviour
+    public abstract class AbstractTeleport : MonoBehaviour
     {
+        public abstract bool CanTeleport();
+
+        public void TransferPlayer()
+        {
+            
+        }
     }
 }

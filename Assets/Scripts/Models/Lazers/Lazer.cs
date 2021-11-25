@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace Models.Lazer
+namespace Models.Lazers
 {
     public class Lazer : MonoBehaviour
     {

@@ -1,9 +1,17 @@
-﻿using UnityEngine;
+﻿using UnityEditorInternal;
 
-namespace Models.Lazer
+namespace Models.Lazers
 {
-    public class LazerKey : MonoBehaviour
+    public class LazerKey
     {
-        
+        public void PlayOnKeyPressedSound()
+        {
+            
+        }
+
+        public void OnKeyPressed()
+        {
+            
+        }
     }
 }

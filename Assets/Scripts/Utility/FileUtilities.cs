@@ -2,6 +2,9 @@
 {
     public class FileUtilities
     {
-        
+        public void OpenJson()
+        {
+            
+        }
     }
 }

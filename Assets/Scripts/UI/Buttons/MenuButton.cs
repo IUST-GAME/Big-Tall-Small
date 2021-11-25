@@ -1,13 +1,13 @@
-﻿namespace Models.Doors
+﻿namespace UI.Buttons
 {
-    public class LockedDoor : AbstractDoor
+    public class MenuButton : AbstractButton
     {
-        public override void PlayOpeningDoorSound()
+        public override void PlayButtonSound()
         {
             throw new System.NotImplementedException();
         }
 
-        public override bool CanItBeOpened()
+        public override void OnButtonPressed()
         {
             throw new System.NotImplementedException();
         }

@@ -2,7 +2,7 @@
 
 namespace Models.Boxes
 {
-    public class AbstractBox : MonoBehaviour
+    public abstract class AbstractBox : MonoBehaviour
     {
         
     }

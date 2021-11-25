@@ -2,6 +2,9 @@
 {
     public class MusicUtility
     {
-        
+        public void PlayMusic()
+        {
+            
+        }
     }
 }
