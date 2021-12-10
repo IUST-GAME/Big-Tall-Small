@@ -10,8 +10,6 @@ namespace Test
         // Start is called before the first frame update
         void Start()
         {
-            var mr = new MapRenderer();
-            mr.RenderMap("");
         }
 
         // Update is called once per frame

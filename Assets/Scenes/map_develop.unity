@@ -233,7 +233,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c24f21ab0d948059faaf11ece7d9b21, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BlueTestBlocks: {fileID: 2605810407296106548, guid: 8dd5c846a686b1f4f80ebf2df8214ec3,
+  Block: {fileID: 2605810407296106548, guid: 8dd5c846a686b1f4f80ebf2df8214ec3, type: 3}
+  Background1: {fileID: 975101962828912301, guid: 562b45285317b5443b264234c3fd80e8,
+    type: 3}
+  Background2: {fileID: 6308769834706047338, guid: bad9141d1bc267a489cb6cae39224878,
     type: 3}
 --- !u!4 &2116056248
 Transform:
@@ -243,7 +246,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2116056246}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.09, y: 0.07, z: -14.867828}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
