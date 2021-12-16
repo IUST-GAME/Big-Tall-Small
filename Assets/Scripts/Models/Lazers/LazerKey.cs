@@ -1,6 +1,4 @@
-﻿using UnityEditorInternal;
-
-namespace Models.Lazers
+﻿namespace Models.Lazers
 {
     public class LazerKey
     {
