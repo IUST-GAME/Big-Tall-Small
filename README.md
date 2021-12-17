@@ -61,3 +61,10 @@
 - [ ]  Implement the join and create game logic
 - [ ]  Implement the setting page
 - [ ]  Implement the setting page logic
+
+## Game map
+
+Each game level is based on a JSON file. There is a 2D matrix of objects.
+
+- 0 - Empty cell
+- 
