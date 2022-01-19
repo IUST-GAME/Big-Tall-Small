@@ -4,12 +4,11 @@ using UnityEngine;
 using UnityEngine.UI;
 using Photon.Pun;
 using Photon.Realtime;
-using System;
-
 
 public class CreateAndJoinRoom : MonoBehaviourPunCallbacks
 {
     public InputField joinInput;
+    string myString;
 
     string RoomName;
     public Text RoomID;
@@ -25,19 +24,17 @@ public class CreateAndJoinRoom : MonoBehaviourPunCallbacks
         RoomOptions opts = new RoomOptions();
         opts.MaxPlayers = 3;
         RoomName = RandomStringGenerator();
-        PhotonNetwork.CreateRoom( "hana" , opts);
+        PhotonNetwork.CreateRoom( RoomName, opts);
     }
     public void JoinRoom()
     {
-        Debug.Log("Here");
-        PhotonNetwork.JoinRoom("hana");
+        PhotonNetwork.JoinRoom(RoomName);
         OnJoinedaRoom = true;
         
     }
     public override void OnJoinedRoom()
     {
-        Debug.Log(RoomName);
-        RoomID.text = "Room ID - " + "hana";
+        RoomID.text = "Room ID - " + RoomName;
         Joined = true;
         if(OnJoinedaRoom == true)
         {
@@ -48,17 +45,16 @@ public class CreateAndJoinRoom : MonoBehaviourPunCallbacks
     {
         if (Joined == true)
         {
-            Debug.Log("clicked");
             PhotonNetwork.LoadLevel("GameScenario");
         }
     }
      public string RandomStringGenerator()
     {
-        Guid g = Guid.NewGuid();
-        string GuidString = Convert.ToBase64String(g.ToByteArray());
-        GuidString = GuidString.Replace("=", "");
-        GuidString = GuidString.Replace("+", "");
-
-        return GuidString;
+        const string glyphs = "abcdefghijklmnopqrstuvwxyz0123456789";
+        for (int i = 0; i < 6; i++)
+        {
+           myString += glyphs[Random.Range(0, glyphs.Length)];
+        }
+        return myString;
     }
 }

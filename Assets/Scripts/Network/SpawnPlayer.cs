@@ -10,7 +10,6 @@ public class SpawnPlayer : MonoBehaviour
 
     float X , Y;
     
-    public List<int> randomList = new List<int>{ 1, 2, 3 };
     void Start()
     {
         X = -5.27f;
@@ -18,20 +17,17 @@ public class SpawnPlayer : MonoBehaviour
 
         Vector2 Position = new Vector2(X, Y);
 
-        if (randomList.Count == 1)
+        if (PhotonNetwork.CurrentRoom.PlayerCount == 1)
         {
             PhotonNetwork.Instantiate(Big.name, Position, Quaternion.identity);
-            randomList.Remove(0);
         }
-        if(randomList.Count == 2)
+        if(PhotonNetwork.CurrentRoom.PlayerCount == 2)
         {
             PhotonNetwork.Instantiate(Tall.name, Position, Quaternion.identity);
-            randomList.Remove(1);
         }
-        if(randomList.Count == 3)
+        if(PhotonNetwork.CurrentRoom.PlayerCount == 3)
         {
             PhotonNetwork.Instantiate(Small.name, Position, Quaternion.identity);
-            randomList.Remove(2);
         }
         
     }
