@@ -24,16 +24,17 @@ public class CreateAndJoinRoom : MonoBehaviourPunCallbacks
         RoomOptions opts = new RoomOptions();
         opts.MaxPlayers = 3;
         RoomName = RandomStringGenerator();
-        PhotonNetwork.CreateRoom( RoomName, opts);
+        PhotonNetwork.CreateRoom( RoomName , opts);
     }
     public void JoinRoom()
     {
-        PhotonNetwork.JoinRoom(RoomName);
+        PhotonNetwork.JoinRoom(joinInput.text);
         OnJoinedaRoom = true;
         
     }
     public override void OnJoinedRoom()
     {
+        Debug.Log(RoomName);
         RoomID.text = "Room ID - " + RoomName;
         Joined = true;
         if(OnJoinedaRoom == true)
