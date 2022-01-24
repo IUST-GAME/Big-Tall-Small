@@ -4,17 +4,17 @@
 
 ## MVP Feature list
 
-- [ ]  Initialize Unity files
-- [ ]  Initialize the code structure
-- [ ]  Implement camera and the ground
-- [ ]  Investigate networking in Unity
+- [X]  Initialize Unity files
+- [X]  Initialize the code structure
+- [X]  Implement camera and the ground
+- [X]  Investigate networking in Unity
 - [ ]  Investigate about music in Unity
-- [ ]  Investigate animations in Unity
-- [ ]  Investigate about creating maps
-- [ ]  Investigate using data structures and file formats like JSON, XML
-- [ ]  Initialize basic abstract models like character
-- [ ]  Implement character movements
-- [ ]  Implement character jump
+- [X]  Investigate animations in Unity
+- [X]  Investigate about creating maps
+- [X]  Investigate using data structures and file formats like JSON, XML
+- [X]  Initialize basic abstract models like character
+- [X]  Implement character movements
+- [X]  Implement character jump
 - [ ]  Implement the game event system
 - [ ]  Implement the main logic of game-winning and loosing
 - [ ]  Add Big character
@@ -35,8 +35,8 @@
     - [ ]  Implement the logic.
 - [ ]  Add Private Doors.
     - [ ]  Implement the logic.
-- [ ]  Implement basic network package in server-side
-- [ ]  Implement basic network package in the client
+- [X]  Implement basic network package in server-side
+- [X]  Implement basic network package in the client
 - [ ]  Implement server-side game rooms and players
 - [ ]  Implement the real-time game
 - [ ]  Implement the music of characters
