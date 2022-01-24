@@ -60,9 +60,10 @@ namespace Map
 
         private Map ReadJsonFile(string mapName)
         {
-            var path = Application.dataPath + "/Maps/" + mapName + ".json";
-            var jsonString = File.ReadAllText(path);
-            return JsonUtility.FromJson<Map>(jsonString);
+            //var path = Application.dataPath + "/Maps/" + mapName + ".json";
+            //var jsonString = File.ReadAllText(path);
+            var text = Resources.Load<TextAsset>("Maps/" + mapName).ToString();
+            return JsonUtility.FromJson<Map>(text);
         }
     }
 }
