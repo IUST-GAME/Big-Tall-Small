@@ -1,8 +1,10 @@
-﻿using Photon.Pun;
+using Photon.Pun;
+﻿using Models;
+using Models.Players;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class CharacterController2D : MonoBehaviour, IPunObservable
+public class CharacterController2D : AbstractPlayer, IPunObservable
 {
 	private PhotonView m_view;
 	[SerializeField] private float m_JumpForce = 400f;							// Amount of force added when the player jumps.
@@ -64,6 +66,14 @@ public class CharacterController2D : MonoBehaviour, IPunObservable
 				if (!wasGrounded)
 					OnLandEvent.Invoke();
 			}
+
+			// if (colliders[i].gameObject.CompareTag(ItemTagsEnum.Box.ToString()))
+			// {
+				// Debug.Log(colliders[i].gameObject);
+				// m_Grounded = true;
+				// if (!wasGrounded)
+					// OnLandEvent.Invoke();
+			// }
 		}
 	}
 
@@ -99,6 +109,24 @@ public class CharacterController2D : MonoBehaviour, IPunObservable
 			m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
 		}
 	}
+	
+	private void OnCollisionEnter2D(Collision2D other)
+	{
+		if (other.gameObject.CompareTag(TagsEnum.Key.ToString()))
+		{
+			keys += 1;
+			other.gameObject.SetActive(false);
+		}
+		
+		if (other.gameObject.CompareTag(TagsEnum.LockedDoor.ToString()))
+		{
+			if (keys > 0)
+			{
+				keys--;
+				other.gameObject.SetActive(false);
+			}
+		}
+	}
 
 
 	private void Flip()
@@ -123,4 +151,19 @@ public class CharacterController2D : MonoBehaviour, IPunObservable
 			transform.localScale = (Vector3) stream.ReceiveNext();
 		}
 	}
+	
+	public override void PlayJumpSound()
+	{
+	}
+
+	public override void PlayTerminationSound()
+	{
+	}
+
+	public override void Jump()
+	{
+	}
+
+	public override void Move()
+	{
 }

@@ -4,6 +4,13 @@
 TagManager:
   serializedVersion: 2
   tags:
+  - Bullet
+  - Key
+  - Door
+  - LockedDoor
+  - Box
+  - DangerZone
+  - Character
   - Tall
   - Small
   - Big
