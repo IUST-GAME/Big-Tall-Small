@@ -52,7 +52,7 @@ GameObject:
   - component: {fileID: 5587779839836277253}
   m_Layer: 0
   m_Name: Tall
-  m_TagString: Untagged
+  m_TagString: Tall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -66,7 +66,7 @@ Transform:
   m_GameObject: {fileID: 3141938363766918373}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -4.57, y: 0.26, z: 0}
-  m_LocalScale: {x: 0.82679135, y: 1.2512002, z: 1}
+  m_LocalScale: {x: 0.7, y: 1.1, z: 1}
   m_Children:
   - {fileID: 3567770186997662150}
   - {fileID: 6344532250632897281}
@@ -203,7 +203,7 @@ MonoBehaviour:
   m_AirControl: 1
   m_WhatIsGround:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 4294967295
   m_GroundCheck: {fileID: 6344532250632897281}
   m_CeilingCheck: {fileID: 3567770186997662150}
   OnLandEvent:
@@ -273,6 +273,7 @@ MonoBehaviour:
   OwnershipTransfer: 0
   observableSearch: 2
   ObservedComponents:
+  - {fileID: 923160564269572946}
   - {fileID: 3141938363766918379}
   - {fileID: 3141938363766918376}
   - {fileID: 5587779839836277253}
