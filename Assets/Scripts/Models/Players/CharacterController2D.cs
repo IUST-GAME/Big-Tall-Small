@@ -126,6 +126,27 @@ public class CharacterController2D : AbstractPlayer, IPunObservable
 				other.gameObject.SetActive(false);
 			}
 		}
+
+		if (
+			this.gameObject.CompareTag(TagsEnum.Big.ToString()) && 
+			other.gameObject.CompareTag(TagsEnum.PrivateDoorBig.ToString()))
+		{
+			other.gameObject.SetActive(false);
+		}
+		
+		if (
+			this.gameObject.CompareTag(TagsEnum.Tall.ToString()) && 
+			other.gameObject.CompareTag(TagsEnum.PrivateDoorTall.ToString()))
+		{
+			other.gameObject.SetActive(false);
+		}
+		
+		if (
+			this.gameObject.CompareTag(TagsEnum.Small.ToString()) && 
+			other.gameObject.CompareTag(TagsEnum.PrivateDoorSmall.ToString()))
+		{
+			other.gameObject.SetActive(false);
+		}
 	}
 
 

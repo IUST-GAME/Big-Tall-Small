@@ -33,8 +33,8 @@
     - [X]  Implement the logic.
 - [X]  Add Door and its key.
     - [X]  Implement the logic.
-- [ ]  Add Private Doors.
-    - [ ]  Implement the logic.
+- [X]  Add Private Doors.
+    - [X]  Implement the logic.
 - [X]  Implement basic network package in server-side
 - [X]  Implement basic network package in the client
 - [X]  Implement server-side game rooms and players

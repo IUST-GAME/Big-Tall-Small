@@ -23,5 +23,8 @@
                 return _instance;
             }
         }
+
+        public int level = 1;
+
     }
 }

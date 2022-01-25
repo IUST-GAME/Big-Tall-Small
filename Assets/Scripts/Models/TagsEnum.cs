@@ -9,6 +9,9 @@
         Character,
         Small,
         Big,
-        Tall
+        Tall,
+        PrivateDoorBig,
+        PrivateDoorTall,
+        PrivateDoorSmall,
     }
 }
