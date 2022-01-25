@@ -24,7 +24,7 @@
             }
         }
 
-        public int level = 1;
+        public int level = 2;
 
     }
 }

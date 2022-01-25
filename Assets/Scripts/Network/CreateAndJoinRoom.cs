@@ -46,7 +46,7 @@ public class CreateAndJoinRoom : MonoBehaviourPunCallbacks
     {
         if (Joined == true)
         {
-            PhotonNetwork.LoadLevel("Level01");
+            PhotonNetwork.LoadLevel("Level03");
         }
     }
      public string RandomStringGenerator()

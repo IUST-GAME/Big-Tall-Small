@@ -95,8 +95,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8459675895175155189}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.56, y: 0.29, z: 0}
-  m_LocalScale: {x: 1.1, y: 1, z: 1}
+  m_LocalPosition: {x: -1.641, y: 0.1888, z: 0}
+  m_LocalScale: {x: 0.89756715, y: 0.8159701, z: 0.8159701}
   m_Children:
   - {fileID: 8160580100565643578}
   - {fileID: 4388319268818602072}
@@ -228,6 +228,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a72eefe8b420cc048ade296e75fa109e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  keys: 0
+  nearbyPickableItem: {fileID: 0}
   m_JumpForce: 400
   m_MovementSmoothing: 0.05
   m_AirControl: 1
