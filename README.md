@@ -8,29 +8,29 @@
 - [X]  Initialize the code structure
 - [X]  Implement camera and the ground
 - [X]  Investigate networking in Unity
-- [ ]  Investigate about music in Unity
+- [X]  Investigate about music in Unity
 - [X]  Investigate animations in Unity
 - [X]  Investigate about creating maps
 - [X]  Investigate using data structures and file formats like JSON, XML
 - [X]  Initialize basic abstract models like character
 - [X]  Implement character movements
 - [X]  Implement character jump
-- [ ]  Implement the game event system
-- [ ]  Implement the main logic of game-winning and loosing
-- [ ]  Add Big character
-    - [ ]  Including specific logics
-- [ ]  Add Small character
-    - [ ]  Including specific logics
-- [ ]  Add Tall character
-    - [ ]  Including specific logics
-- [ ]  Add Box
+- [X]  Implement the game event system
+- [X]  Implement the main logic of game-winning
+- [X]  Add Big character
+    - [X]  Including specific logics
+- [X]  Add Small character
+    - [X]  Including specific logics
+- [X]  Add Tall character
+    - [X]  Including specific logics
+- [X]  Add Box
 - [ ]  Add Danger zone
-- [ ]  Add Blocks
+- [X]  Add Blocks
 - [ ]  Add Jumping block
 - [ ]  Add Shooting device
     - [ ]  Implement the logic.
-- [ ]  Add Lazer and its button.
-    - [ ]  Implement the logic.
+- [X]  Add Lazer and its button.
+    - [X]  Implement the logic.
 - [X]  Add Door and its key.
     - [X]  Implement the logic.
 - [ ]  Add Private Doors.
@@ -48,17 +48,14 @@
     - [ ]  Doors
     - [ ]  Lazers
     - [ ]  Final Gate
-- [ ]  Implement the music of game UI
-    - [ ]  Menu
-    - [ ]  Buttons
-- [ ]  Implement the animation of characters
-- [ ]  Implement map package for reading different maps
-- [ ]  Implement the main menu
+- [X]  Implement the animation of characters
+- [X]  Implement map package for reading different maps
+- [X]  Implement the main menu
 - [ ]  Implement the levels page
-- [ ]  Implement the levels logic
-- [ ]  Implement the create game page for a host
-- [ ]  Implement the join game page for other clients
-- [ ]  Implement the join and create game logic
+- [X]  Implement the levels logic
+- [X]  Implement the create game page for a host
+- [X]  Implement the join game page for other clients
+- [X]  Implement the join and create game logic
 - [ ]  Implement the setting page
 - [ ]  Implement the setting page logic
 
