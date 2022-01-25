@@ -7,5 +7,8 @@
         Box,
         LazerButton,
         Character,
+        Small,
+        Big,
+        Tall
     }
 }
