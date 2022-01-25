@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using Photon.Pun;
+using Repository;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -22,10 +23,12 @@ public class WinCondition : MonoBehaviour
     {
         if (isBigIn & isTallIn & isSmallIn)
         {
+            GameRepository.Instance.level += 1;
+            
             DontDestroyOnLoad(GameObject.FindWithTag("Big"));
             DontDestroyOnLoad(GameObject.FindWithTag("Tall"));
             DontDestroyOnLoad(GameObject.FindWithTag("Small"));
-            PhotonNetwork.LoadLevel("Level02");
+            PhotonNetwork.LoadLevel("Level0" + GameRepository.Instance.level);
             //SceneManager.LoadScene("Level02");
         }
     }
