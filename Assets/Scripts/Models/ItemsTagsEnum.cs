@@ -3,6 +3,7 @@
     public enum ItemTagsEnum
     {
         Key,
-        LockedDoor
+        LockedDoor,
+        Box
     }
 }
