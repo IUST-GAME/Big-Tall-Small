@@ -14,18 +14,15 @@ public class WinCondition : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        PhotonNetwork.AutomaticallySyncScene = true;
+        //PhotonNetwork.AutomaticallySyncScene = true;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (isBigIn & isTallIn)
+        if (isBigIn & isTallIn & isSmallIn)
         {
-            if (PhotonNetwork.IsMasterClient)
-            {
-                PhotonNetwork.LoadLevel("Level02");
-            }
+            PhotonNetwork.LoadLevel("Level02");
             //SceneManager.LoadScene("Level02");
         }
     }
