@@ -82,7 +82,7 @@ GameObject:
   - component: {fileID: 6747181481193056635}
   m_Layer: 0
   m_Name: Big
-  m_TagString: Untagged
+  m_TagString: Big
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -303,6 +303,7 @@ MonoBehaviour:
   OwnershipTransfer: 0
   observableSearch: 2
   ObservedComponents:
+  - {fileID: 783275015728776020}
   - {fileID: 8459675895175155195}
   - {fileID: 8459675895175155192}
   - {fileID: 6747181481193056635}

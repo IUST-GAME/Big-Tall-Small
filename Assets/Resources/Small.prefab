@@ -52,7 +52,7 @@ GameObject:
   - component: {fileID: 1075795432705120736}
   m_Layer: 0
   m_Name: Small
-  m_TagString: Untagged
+  m_TagString: Small
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -273,6 +273,7 @@ MonoBehaviour:
   OwnershipTransfer: 0
   observableSearch: 2
   ObservedComponents:
+  - {fileID: 6647484923514055711}
   - {fileID: 3072329075237487849}
   - {fileID: 3072329075237487850}
   - {fileID: 1075795432705120736}
