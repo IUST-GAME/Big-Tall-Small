@@ -22,6 +22,9 @@ public class WinCondition : MonoBehaviour
     {
         if (isBigIn & isTallIn & isSmallIn)
         {
+            DontDestroyOnLoad(GameObject.FindWithTag("Big"));
+            DontDestroyOnLoad(GameObject.FindWithTag("Tall"));
+            DontDestroyOnLoad(GameObject.FindWithTag("Small"));
             PhotonNetwork.LoadLevel("Level02");
             //SceneManager.LoadScene("Level02");
         }
