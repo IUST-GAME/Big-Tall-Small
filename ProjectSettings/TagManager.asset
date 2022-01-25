@@ -3,7 +3,20 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Bullet
+  - Key
+  - Door
+  - LockedDoor
+  - Box
+  - DangerZone
+  - Character
+  - Tall
+  - Small
+  - Big
+  - PrivateDoorBig
+  - PrivateDoorTall
+  - PrivateDoorSmall
   layers:
   - Default
   - TransparentFX
