@@ -166,4 +166,5 @@ public class CharacterController2D : AbstractPlayer, IPunObservable
 
 	public override void Move()
 	{
+	}
 }
