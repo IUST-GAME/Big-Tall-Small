@@ -31,14 +31,14 @@
     - [ ]  Implement the logic.
 - [ ]  Add Lazer and its button.
     - [ ]  Implement the logic.
-- [ ]  Add Door and its key.
-    - [ ]  Implement the logic.
+- [X]  Add Door and its key.
+    - [X]  Implement the logic.
 - [ ]  Add Private Doors.
     - [ ]  Implement the logic.
 - [X]  Implement basic network package in server-side
 - [X]  Implement basic network package in the client
-- [ ]  Implement server-side game rooms and players
-- [ ]  Implement the real-time game
+- [X]  Implement server-side game rooms and players
+- [X]  Implement the real-time game
 - [ ]  Implement the music of characters
     - [ ]  Jumping of each one of them
     - [ ]  Terminating of each one of them

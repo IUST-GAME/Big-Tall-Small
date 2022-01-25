@@ -1,7 +1,9 @@
-﻿using UnityEngine;
+﻿using Models;
+using Models.Players;
+using UnityEngine;
 using UnityEngine.Events;
 
-public class CharacterController2D : MonoBehaviour
+public class CharacterController2D : AbstractPlayer
 {
 	[SerializeField] private float m_JumpForce = 400f;							// Amount of force added when the player jumps.
 	// [Range(0, 1)] [SerializeField] private float m_CrouchSpeed = .36f;			// Amount of maxSpeed applied to crouching movement. 1 = 100%
@@ -88,6 +90,26 @@ public class CharacterController2D : MonoBehaviour
 			m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
 		}
 	}
+	
+	private void OnCollisionEnter2D(Collision2D other)
+	{
+		if (other.gameObject.CompareTag(ItemTagsEnum.Key.ToString()))
+		{
+			Debug.Log("Pick Key");
+			keys += 1;
+			other.gameObject.SetActive(false);
+		}
+		
+		if (other.gameObject.CompareTag(ItemTagsEnum.LockedDoor.ToString()))
+		{
+			Debug.Log(keys);
+			if (keys > 0)
+			{
+				keys--;
+				other.gameObject.SetActive(false);
+			}
+		}
+	}
 
 
 	private void Flip()
@@ -99,5 +121,21 @@ public class CharacterController2D : MonoBehaviour
 		Vector3 theScale = transform.localScale;
 		theScale.x *= -1;
 		transform.localScale = theScale;
+	}
+
+	public override void PlayJumpSound()
+	{
+	}
+
+	public override void PlayTerminationSound()
+	{
+	}
+
+	public override void Jump()
+	{
+	}
+
+	public override void Move()
+	{
 	}
 }
