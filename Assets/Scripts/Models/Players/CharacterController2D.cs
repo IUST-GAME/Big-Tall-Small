@@ -1,10 +1,12 @@
+using Photon.Pun;
 ﻿using Models;
 using Models.Players;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class CharacterController2D : AbstractPlayer
+public class CharacterController2D : AbstractPlayer, IPunObservable
 {
+	private PhotonView m_view;
 	[SerializeField] private float m_JumpForce = 400f;							// Amount of force added when the player jumps.
 	// [Range(0, 1)] [SerializeField] private float m_CrouchSpeed = .36f;			// Amount of maxSpeed applied to crouching movement. 1 = 100%
 	[Range(0, .3f)] [SerializeField] private float m_MovementSmoothing = .05f;	// How much to smooth out the movement
@@ -36,7 +38,16 @@ public class CharacterController2D : AbstractPlayer
 
 		if (OnLandEvent == null)
 			OnLandEvent = new UnityEvent();
+		m_view = GetComponent<PhotonView>();
+		AddObservable();
 		
+	}
+	private void AddObservable()
+	{
+		if (!m_view.ObservedComponents.Contains(this))
+		{
+			m_view.ObservedComponents.Add(this);
+		}
 	}
 
 	private void FixedUpdate()
@@ -129,6 +140,18 @@ public class CharacterController2D : AbstractPlayer
 		transform.localScale = theScale;
 	}
 
+	public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
+	{
+		if (stream.IsWriting)
+		{
+			stream.SendNext(transform.localScale);
+		}
+		else
+		{
+			transform.localScale = (Vector3) stream.ReceiveNext();
+		}
+	}
+	
 	public override void PlayJumpSound()
 	{
 	}
@@ -143,5 +166,4 @@ public class CharacterController2D : AbstractPlayer
 
 	public override void Move()
 	{
-	}
 }

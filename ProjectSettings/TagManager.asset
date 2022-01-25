@@ -11,6 +11,9 @@ TagManager:
   - Box
   - DangerZone
   - Character
+  - Tall
+  - Small
+  - Big
   layers:
   - Default
   - TransparentFX
