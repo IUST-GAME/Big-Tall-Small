@@ -49,10 +49,8 @@ public class CharacterController2D : AbstractPlayer
 		Collider2D[] colliders = Physics2D.OverlapCircleAll(m_GroundCheck.position, k_GroundedRadius, m_WhatIsGround);
 		for (int i = 0; i < colliders.Length; i++)
 		{
-			Debug.Log(colliders[i].gameObject);
 			if (colliders[i].gameObject != gameObject)
 			{
-				Debug.Log(colliders[i].gameObject);
 				m_Grounded = true;
 				if (!wasGrounded)
 					OnLandEvent.Invoke();
@@ -95,7 +93,6 @@ public class CharacterController2D : AbstractPlayer
 		// If the player should jump...
 		if (m_Grounded && jump)
 		{
-			Debug.Log("let's jump");
 			// Add a vertical force to the player.
 			m_Grounded = false;
 			m_Rigidbody2D.AddForce(new Vector2(0f, m_JumpForce));
@@ -104,16 +101,14 @@ public class CharacterController2D : AbstractPlayer
 	
 	private void OnCollisionEnter2D(Collision2D other)
 	{
-		if (other.gameObject.CompareTag(ItemTagsEnum.Key.ToString()))
+		if (other.gameObject.CompareTag(TagsEnum.Key.ToString()))
 		{
-			Debug.Log("Pick Key");
 			keys += 1;
 			other.gameObject.SetActive(false);
 		}
 		
-		if (other.gameObject.CompareTag(ItemTagsEnum.LockedDoor.ToString()))
+		if (other.gameObject.CompareTag(TagsEnum.LockedDoor.ToString()))
 		{
-			Debug.Log(keys);
 			if (keys > 0)
 			{
 				keys--;

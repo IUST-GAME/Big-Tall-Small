@@ -9,6 +9,8 @@ TagManager:
   - Door
   - LockedDoor
   - Box
+  - DangerZone
+  - Character
   layers:
   - Default
   - TransparentFX
